@@ -1,7 +1,7 @@
 /**
- * Return le plus grand nombre
- * @param numbs 
- * @returns 
+ * recherche le nombre le plus grand
+ * @param numbs la liste des nombres
+ * @returns le nombre le plus grand
  */
 let lePlusGrandNombre = (...numbs:number[]):number =>{
     let lePlusGrand = 0;

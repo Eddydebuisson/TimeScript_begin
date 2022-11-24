@@ -1,7 +1,7 @@
 /**
- * Calcule et returne la moyenne des notes 
- * @param notes 
- * @returns 
+ * calcule la moyenne
+ * @param notes la liste des notes
+ * @returns la moyenne
  */
 let calculMoyenne = (notes: number[]): number => {
     let sommeDesnotes = 0;
@@ -16,9 +16,9 @@ let calculMoyenne = (notes: number[]): number => {
 
 /**
  *  return la mention de l'élève et sa moyenne
- * @param eleve 
- * @param notes 
- * @returns 
+ * @param eleve le nom de l'élève
+ * @param notes la liste des notes de l'élève
+ * @returns la mention de l'élève
  */
 let moyenneDeLeleve =(eleve: string, ...notes: number[]):string => {
     let moyenne:number  = calculMoyenne(notes);

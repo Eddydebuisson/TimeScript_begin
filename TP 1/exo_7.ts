@@ -1,9 +1,9 @@
 /**
- *  Retourne le résultat de l'opération qui est passer en paramètre
- * @param operateur 
- * @param premier 
- * @param deuxieme 
- * @returns 
+ *  calcule l'opération
+ * @param operateur l'opérateur
+ * @param premier premier nombre
+ * @param deuxieme deuxième nombre
+ * @returns le résultat de l'opération
  */
 let calcule =(operateur:string, premier:number, deuxieme: number) :number=>{
     return parseInt(eval (`${premier} ${operateur} ${deuxieme}`))
