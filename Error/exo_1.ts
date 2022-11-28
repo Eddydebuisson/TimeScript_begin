@@ -4,7 +4,11 @@ type Chat = {
   age: number;
   poid: number;
 };
-
+/**
+ * affiche la liste des surnoms et les données du chat
+ * @param chat le chat 
+ * @param surnoms la liste des surnoms
+ */
 const getChat = (chat: Chat, ...surnoms: string[]) => {
   console.log(
     `Mon super chat s'appelle ${chat.nom}, c'est un ${
