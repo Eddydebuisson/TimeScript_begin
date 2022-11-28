@@ -1,13 +1,13 @@
 /**
- * recherche le nombre le plus grand
- * @param numbs la liste des nombres
+ * recherche le nombre le plus grand nombre
+ * @param nombres la liste des nombres
  * @returns le nombre le plus grand
  */
-let lePlusGrandNombre = (...numbs: number[]): number => {
+let lePlusGrandNombre = (...nombres: number[]): number => {
   let lePlusGrand = 0;
-  numbs.forEach((numb) => {
-    if (numb > lePlusGrand) {
-      lePlusGrand = numb;
+  nombres.forEach((nombre) => {
+    if (nombre > lePlusGrand) {
+      lePlusGrand = nombre;
     }
   });
 
