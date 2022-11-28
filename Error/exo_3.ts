@@ -4,7 +4,9 @@ class Chatte{
     age!: number;
     poid!: number;
 
-
+    /**
+     * retourne les attributs de la classe Chatte
+     */
     getChat = () => {
         console.log(
           `Mon super chat s'appelle ${this.nom}, c'est un ${
@@ -21,3 +23,5 @@ class Chatte{
       tao2.race = "chat";
       tao2.age = 7 ;
       tao2.poid = 5;
+
+      tao2.getChat();
