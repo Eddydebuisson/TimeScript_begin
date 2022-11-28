@@ -51,3 +51,9 @@ class Stagiaire extends Collaborateur{
 
 const employe0: Salarie = new Salarie("clette",'Lara',1000)
 const stagiaire1: Stagiaire = new Stagiaire(" paltan","jay", new Date("2022/12/31"));
+
+console.log(employe1)
+employe1.augmentation(10)
+
+console.log(stagiaire1)
+stagiaire1.prolonger(90)
