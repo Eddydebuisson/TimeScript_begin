@@ -6,10 +6,27 @@
 let calculMoyenne = (notes: number[]): number => {
   let sommeDesnotes = 0;
   notes.forEach((note) => {
-    sommeDesnotes += note;
+    if (verifierNote(note)) {
+      sommeDesnotes += note;
+    } else {
+      console.log(`La note ${note} a été ignorée car non valide ! Désolé ♥`);
+    }
   });
 
   return sommeDesnotes / notes.length;
+};
+
+/**
+ * Verifie si la note est bien comprise entre 0 et 20
+ * @param note la note a verifier
+ * @returns return false si la note est inférieure à zero ou supérieure a 20
+ */
+let verifierNote = (note: number): boolean => {
+  if (note < 0 || note > 20) {
+    return false;
+  } else {
+    return true;
+  }
 };
 
 /**
