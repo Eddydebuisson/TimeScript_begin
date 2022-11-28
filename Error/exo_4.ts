@@ -23,6 +23,20 @@ class Salarie extends Collaborateur{
     travailler():string{
         return `${this._prenom} ${this._nom} travaille comme un fou car il aimerait une auguementation`
     }
+
+    augmentation(pourcentage: number): void {
+        if (pourcentage < 0) {
+          throw new Error("Le pourcentage doit être positif");
+        } else {
+          console.log(
+            `Le salaire de ${this._prenom} ${this._nom} va être augmenté de ${pourcentage}%. Il est actuellement de ${this._salaire}`
+          );
+          const augmentation = (this._salaire * pourcentage) / 100;
+          console.log(`Il gagnera ${augmentation}€ supplémentaires`);
+          this._salaire += augmentation;
+          console.log(`Son nouveau salaire est de ${this._salaire}€`);
+        }
+      }
 }
 
 class Stagiaire extends Collaborateur{
@@ -52,8 +66,8 @@ class Stagiaire extends Collaborateur{
 const employe0: Salarie = new Salarie("clette",'Lara',1000)
 const stagiaire1: Stagiaire = new Stagiaire(" paltan","jay", new Date("2022/12/31"));
 
-console.log(employe1)
-employe1.augmentation(10)
+console.log(employe0)
+employe0.augmentation(10)
 
 console.log(stagiaire1)
 stagiaire1.prolonger(90)
