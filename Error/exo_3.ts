@@ -57,7 +57,7 @@ class Europeen extends Chatte{
         return this._surnoms;
     }
     set setSurnoms(nouveauSurnoms:string[]){
-        this._surnoms =nouveauSurnoms;
+        nouveauSurnoms.forEach( surnom => {this._surnoms.push(surnom)})
     }
 
     getChat = () => {
@@ -68,6 +68,6 @@ class Europeen extends Chatte{
 
 }
 
-const tao3 = new Europeen("Tao",7,6,["gros sac", "boule de poils"],"France");
+const tao3 :Europeen = new Europeen("Tao",7,6,["gros sac", "boule de poils"],"France");
 
 tao3.getChat()
