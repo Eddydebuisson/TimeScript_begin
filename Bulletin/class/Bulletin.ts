@@ -1,12 +1,12 @@
 import Note from "./Note";
 
 export default class Bulletin {
-  private _notes: Note[];
+  private _notes: Note[]= [];
   /**
    * ajoute une nouvelle note au carnet de notes
    * @param nouvelleNote la nouvelle note
    */
-  private ajouterNote(nouvelleNote: Note) {
+  public ajouterNote(nouvelleNote: Note) {
     if (nouvelleNote.valeur > 20 || nouvelleNote.valeur < 0) {
       throw new Error("la note est incorrecte ! !");
     } else {
