@@ -24,3 +24,4 @@ const partie = new Partie(gobelet);
 partie.initialiserPartie(3, 3, j1, j2, j3, j4);
 
 partie.lancerPartie();
+partie.finDePartie();

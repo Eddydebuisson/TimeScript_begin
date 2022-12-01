@@ -3,6 +3,7 @@ import Gobelet from "./Gobelet";
 export default class Joueur {
     public _nom:string;
     public _score:number=0;
+    public _nombreDeTourGagner:number =0;
 
     constructor(nom:string){
         this._nom = nom;

@@ -11,7 +11,7 @@ export default class Partie {
     this._gobelet = gobelet;
    }
    
-
+   
 
 
 
@@ -43,7 +43,26 @@ export default class Partie {
                 gagnant = joueur;
             }
         });
-
+        this._nombreJoueurs.forEach( joueur =>  {
+            if(gagnant._nom === joueur._nom){
+                joueur._nombreDeTourGagner +=1 ;
+            }
+        })
         console.log(`Le gagnant de ce tour est ${gagnant._nom}`)
+    }
+
+    finDePartie(){
+        let maxPartiGagner:number = 0;
+        let joueurAvecMaxPartiGagner!:Joueur ;
+        console.log("---------------Fin de la partie-------------------------")
+        this._nombreJoueurs.forEach( joueur =>{
+            if( maxPartiGagner < joueur._nombreDeTourGagner){
+                joueurAvecMaxPartiGagner = joueur;
+            }
+            console.log(`Le joueur ${joueur._nom} a gagner ${joueur._nombreDeTourGagner} partie`)
+        })
+            console.log(`Le grand gagnat du jeu est !! **Roulement de tambour** ${joueurAvecMaxPartiGagner._nom}`)
+        
+
     }
 }
