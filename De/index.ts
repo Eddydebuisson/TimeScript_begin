@@ -5,12 +5,7 @@ import Partie from "./class/Partie";
 
 const de: De = new De();
 
-console.log(de.lancer());
-
 const gobelet: Gobelet = new Gobelet();
-
-console.log(gobelet.lancer(6));
-console.log(gobelet.afficherScore());
 
 console.log("--------Test Partie---------");
 
@@ -21,7 +16,4 @@ const j4 = new Joueur("eddy");
 
 const partie = new Partie(gobelet);
 
-partie.initialiserPartie(3, 3, j1, j2, j3, j4);
-
-partie.lancerPartie();
-partie.finDePartie();
+partie.game(999, 1, j1, j2, j3, j4);
